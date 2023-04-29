@@ -5,12 +5,12 @@ import { signIn } from "next-auth/react";
 
 const Login = () => {
   return (
-    <div className="bg-sky-500 grid grid-cols-2">
+    <div className="bg-sky-500 grid grid-rows-2 lg:grid-cols-2">
       <Head>
         <title>Twitter Clone</title>
         <meta name="description" content="Make a web twitter clone" />
       </Head>
-      <div className="h-screen grid place-items-center">
+      <div className="h-[50vh] lg:h-screen grid place-items-center">
         <BsTwitter className="text-white text-8xl" />
       </div>
       <div className="grid place-items-center">
@@ -19,7 +19,7 @@ const Login = () => {
           onClick={() => signIn("google")}
         >
           <FcGoogle className="text-2xl" />
-          SignIn with Google
+          Sign In with Google
         </div>
       </div>
     </div>
@@ -27,3 +27,4 @@ const Login = () => {
 };
 
 export default Login;
+
